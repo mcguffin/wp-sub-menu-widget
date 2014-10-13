@@ -1,7 +1,7 @@
 <?php
 
 /*
-Plugin Name: Sub Menu Widget
+Plugin Name: WP Sub Menu Widget
 Plugin URI: https://github.com/mcguffin/wp-sub-menu-widget/
 Description: ...
 Author: Jörn Lund

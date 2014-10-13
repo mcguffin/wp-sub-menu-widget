@@ -5,8 +5,8 @@ class Sub_Menu_Widget extends WP_Widget {
 
 
 	public function __construct() {
-		$widget_ops = array( 'description' => __('Add a custom menu to your sidebar.') );
-		parent::__construct( 'sub_menu', __('Submenu'), $widget_ops );
+		$widget_ops = array( 'description' => __('Add a submenu to your sidebar.','wp-sub-menu-widget') );
+		parent::__construct( 'sub_menu', __('Submenu','wp-sub-menu-widget'), $widget_ops );
 	}
 
 	public function widget($args, $instance) {
@@ -105,7 +105,7 @@ class Sub_Menu_Widget extends WP_Widget {
 			<select id="<?php echo $this->get_field_id('nav_menu'); ?>" name="<?php echo $this->get_field_name('nav_menu'); ?>">
 				<option value="0"><?php _e( '&mdash; Select &mdash;' ) ?></option>
 				<option value="-1" <?php selected( $nav_menu, -1, true ) ?>><?php _e( 'Pages' ) ?></option>
-				<optgroup label="<?php _e('Menu Location') ?>">
+				<optgroup label="<?php _e( 'Theme locations' ) ?>">
 				<?php
 					foreach ( $menu_locations as $location => $description ) {
 						echo '<option value="' . $location . '"'
