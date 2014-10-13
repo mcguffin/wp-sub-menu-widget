@@ -30,17 +30,18 @@ class Sub_Menu_Widget extends WP_Widget {
 						// actual nav menu
 						$nav_menu_opts['walker'] = new Walker_Sub_Menu();
 					} else {
-						// fallback to pages
+						// force pages fallback
 						$nav_menu_opts['theme_location'] = '---none-'.time(); 
 						$nav_menu_opts['fallback_cb'] = array(&$this,'_pages_menu');
+						// Hacky! If no theme location given WP will just take the first menu with items. 
+						// We want it to fall back to page menu here, so we give an invalid theme location.
 					}
 				}
 				$nav_menu = $instance['nav_menu'];
 			} else if ( $instance['nav_menu'] == -1 ) { // pages selected
 				// force fallback
+						// force pages fallback
 				$nav_menu_opts['theme_location'] = '---none-'.time(); 
-					// Hacky! If no theme location given WP will just take the first menu with items. 
-					// We want it to fall back to page menu here, so we give an invalid theme location.
 				$nav_menu_opts['fallback_cb'] = array(&$this,'_pages_menu');
 				$nav_menu = $instance['nav_menu'];
 			} else if ( $instance['nav_menu'] > 0 ) {  // some menu selected
@@ -51,14 +52,15 @@ class Sub_Menu_Widget extends WP_Widget {
 		}
 		
 		if ( ! $nav_menu ) {
-			// unconfigured.
 			return;
 		}
 		
-		/** This filter is documented in wp-includes/default-widgets.php */
-		$instance['title'] = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
+		
 		$menu_contents = wp_nav_menu($nav_menu_opts);
-		if ( $menu_contents ) {
+		
+		if ( trim(strip_tags($menu_contents)) ) {
+			/** This filter is documented in wp-includes/default-widgets.php */
+			$instance['title'] = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 			echo $args['before_widget'];
 
 			if ( !empty($instance['title']) )
