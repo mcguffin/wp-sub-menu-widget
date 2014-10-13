@@ -26,7 +26,7 @@ class SubMenuWidget {
 		add_action( 'init' , array(&$this,'plugins_loaded') );
 	}
 	function plugins_loaded() {
-		load_plugin_textdomain('wp-sub-menu',false,dirname( plugin_basename( __FILE__ )) . '/languages/');
+		load_plugin_textdomain('wp-sub-menu-widget',false,dirname( plugin_basename( __FILE__ )) . '/languages/');
 	}
 	function load_sub_menu_widget() {
 		require_once(  plugin_dir_path( __FILE__ ) . 'include/class-sub-menu-widget.php' );

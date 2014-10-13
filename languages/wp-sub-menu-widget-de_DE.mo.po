@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WordPress Nav Menu Widget Extension v0.0.1\n"
+"Project-Id-Version: WP Sub Menu Widget v0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-10-07 11:19:36+0000\n"
+"PO-Revision-Date: 2014-10-13 13:02:14+0000\n"
 "Last-Translator: admin <joern@flyingletters.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,29 +20,49 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes"
 
-#: include/class-wp-nav-menu-widget-extended.php:72
+#: include/class-sub-menu-widget.php:107
 #@ default
 msgid "Pages"
 msgstr ""
 
-#: include/class-wp-nav-menu-widget-extended.php:77
+#: include/class-sub-menu-widget.php:100
 #@ default
 msgid "Title:"
 msgstr ""
 
-#: include/class-wp-nav-menu-widget-extended.php:81
-#@ wp-nav-menu-extension
-msgid "Same as in Location:"
-msgstr "Wie an Position:"
-
-#: include/class-wp-nav-menu-widget-extended.php:83
-#: include/class-wp-nav-menu-widget-extended.php:96
+#: include/class-sub-menu-widget.php:106
 #@ default
 msgid "&mdash; Select &mdash;"
 msgstr ""
 
-#: include/class-wp-nav-menu-widget-extended.php:94
+#: include/class-sub-menu-widget.php:104
 #@ default
 msgid "Select Menu:"
+msgstr ""
+
+#: include/class-sub-menu-widget.php:8
+#@ wp-sub-menu-widget
+msgid "Add a submenu to your sidebar."
+msgstr "Zeigt ein Untermenü des ausgewählten Menüeintrag in der Sidebar an"
+
+#: include/class-sub-menu-widget.php:9
+#@ wp-sub-menu-widget
+msgid "Submenu"
+msgstr "Untermenü"
+
+#: include/class-sub-menu-widget.php:108
+#@ default
+msgid "Theme locations"
+msgstr ""
+
+#: include/class-sub-menu-widget.php:116
+#@ default
+msgid "Menus"
+msgstr ""
+
+#: include/class-walker-sub-menu-page.php:113
+#, php-format
+#@ default
+msgid "#%d (no title)"
 msgstr ""
 
