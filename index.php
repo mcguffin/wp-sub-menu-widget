@@ -3,7 +3,7 @@
 /*
 Plugin Name: WP Sub Menu Widget
 Plugin URI: https://github.com/mcguffin/wp-sub-menu-widget/
-Description: ...
+Description: Widget showing submenu of the currently selected manu item.
 Author: Jörn Lund
 Version: 0.0.1
 Author URI: https://github.com/mcguffin/
